@@ -112,7 +112,7 @@ def hmmModel ():
                                 [0.3, 0.3, 0.4]])
 
     #model.transmat_ = transition_matrix
-    #model.transmat_ = np.array([[3,4,5,6,7],
+    #model.transmat_ = np.array([[3,4,5,6,7]])
     model.means_ = np.array([[0.0, 0.0], [3.0, -3.0], [5.0, 10.0]])
     model.covars_ = np.tile(np.identity(2), (3, 1, 1))
     X, Z = model.sample(100)
@@ -123,7 +123,7 @@ def hmmModel ():
 inputfile = load_data('training-data.txt')
 train_data = vocab_set (inputfile)
 transition_matrix = transitionMatrix()
-observation_matrix  = transitionMatrix()
+observation_matrix  = observationMatrix()
 #forwardProb(transition_matrix,observation_matrix)
 #forwardProb(t,o)
 #hmmModel(transition_matrix)
